@@ -36,7 +36,7 @@ class Mobile extends Product{
 
     getDiscount(discount :number):number {
         const discountprice =this.price * this.price *(discount/10);
-          return discountprice;
+         console.log(discountptice)
     }
 
 }
