@@ -87,7 +87,7 @@
 interface Product {
     name : string;
     brand: string;
-    readonly price : number;
+     price : number;
     rating? : number;
 }
 interface Product {
