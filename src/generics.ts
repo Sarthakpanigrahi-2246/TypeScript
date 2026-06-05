@@ -46,14 +46,14 @@
 
 //*****      ADVANCE GENERICS          *****/
 
-class ItemStorage{
-  private items: string[] = [];
+class ItemStorage<T>{
+  private items: T[] = [];
 
-  additem(item:string) {
+  additem(item:T) {
     this.items.push(item)
   }
 
-  removeitem(item : string){
+  removeitem(item : T){
     this.items = this.items.filter((i)=>{i !== item})
   }
 
@@ -62,7 +62,7 @@ class ItemStorage{
   }
 }
 
-const storage = new ItemStorage();
+const storage = new ItemStorage<string>();
 
 storage.additem("gandu");
 storage.additem("pandu");
@@ -71,5 +71,27 @@ storage.additem("gandu");
 storage.getAllitem()
 
 
-const numberstore = new ItemStorage();
+const numberstore = new ItemStorage<number>();
 numberstore.additem(33);
+numberstore.getAllitem()
+
+
+
+interface User{
+  name :string;
+  age: number;
+  ////index property
+  [prop: string]: string | number;
+}
+
+const userStore = new ItemStorage<User>();
+userStore.additem({name:"sarthak", age : 50});
+userStore.getAllitem();
+
+
+const user : User ={
+  name : "sarthak",
+  age : 22,
+  email: "sp@gmail.com",
+  number: 2233445566
+}

@@ -84,31 +84,31 @@
 
 
 //merge both product
-interface Product {
-    name : string;
-    brand: string;
-     price : number;
-    rating? : number;
-}
-interface Product {
-    name : string;
-    brand: string;
-    readonly price : number;
-    rating? : number;
-    discount :string;
-    desc:string;
-}
+// interface Product {
+//     name : string;
+//     brand: string;
+//      readonly price : number;
+//     rating? : number;
+// }
+// interface Product {
+//     name : string;
+//     brand: string;
+//     readonly price : number;
+//     rating? : number;
+//     discount :string;
+//     desc:string;
+// }
 
 
 
-class Mobile implements Product{
- name = "iPhone";
-    brand = "Apple";
-    readonly price = 100000;
-    discount = "10%";
-    desc = "Latest iPhone";
+// class Mobile implements Product{
+//  name = "iPhone";
+//     brand = "Apple";
+//     readonly price = 100000;
+//     discount = "10%";
+//     desc = "Latest iPhone";
     
-}
+// }
 
 
 
